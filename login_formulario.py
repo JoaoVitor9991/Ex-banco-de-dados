@@ -74,7 +74,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-
+    
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
     def show_login_page(self):
@@ -87,7 +87,15 @@ class Ui_MainWindow(object):
         self.txt_senha.setText(QCoreApplication.translate("MainWindow", u"Senha", None))
         self.pushButton_Entrar.setText(QCoreApplication.translate("MainWindow", u"Entrar", None))
     # retranslateUi
-    
+    def check_login(self):
+        email = self.line_email.text()
+        senha = self.line_senha.text()
+
+        email_correto = "123"
+        senha_correto ="123"
+
+        if email == email_correto and senha == senha_correto:
+            self.ui_mainWindow()
 if __name__ == "__main__":
     app = QApplication([]) 
     mainWindow = QMainWindow()  
