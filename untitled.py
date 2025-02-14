@@ -62,7 +62,7 @@ class Ui_TelaLogin(object):
         self.pushButton_entrar.setStyleSheet(u"background-color: rgb(85, 255, 127);")
         self.img = QLabel(self.frame)
         self.img.setObjectName(u"img")
-        self.img.setGeometry(QRect(500, 140, 261, 341))
+        self.img.setGeometry(QRect(460, 90, 341, 241))
         self.img.setPixmap(QPixmap(u":/f/imagem.jpg"))
         TelaLogin.setCentralWidget(self.centralwidget)
 
