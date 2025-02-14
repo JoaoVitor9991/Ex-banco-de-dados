@@ -1,0 +1,82 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'untitled.ui'
+##
+## Created by: Qt User Interface Compiler version 6.8.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QWidget)
+import icon_rc
+
+class Ui_TelaLogin(object):
+    def setupUi(self, TelaLogin):
+        if not TelaLogin.objectName():
+            TelaLogin.setObjectName(u"TelaLogin")
+        TelaLogin.resize(800, 600)
+        self.centralwidget = QWidget(TelaLogin)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.frame = QFrame(self.centralwidget)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(-11, -1, 811, 601))
+        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.txt_Login = QLabel(self.frame)
+        self.txt_Login.setObjectName(u"txt_Login")
+        self.txt_Login.setGeometry(QRect(130, 90, 221, 81))
+        font = QFont()
+        font.setPointSize(26)
+        font.setItalic(True)
+        self.txt_Login.setFont(font)
+        self.txt_senha_2 = QLabel(self.frame)
+        self.txt_senha_2.setObjectName(u"txt_senha_2")
+        self.txt_senha_2.setGeometry(QRect(30, 210, 49, 16))
+        font1 = QFont()
+        font1.setPointSize(12)
+        self.txt_senha_2.setFont(font1)
+        self.lineEdit_email = QLineEdit(self.frame)
+        self.lineEdit_email.setObjectName(u"lineEdit_email")
+        self.lineEdit_email.setGeometry(QRect(100, 210, 271, 22))
+        self.txt_senha = QLabel(self.frame)
+        self.txt_senha.setObjectName(u"txt_senha")
+        self.txt_senha.setGeometry(QRect(30, 270, 49, 16))
+        self.txt_senha.setFont(font1)
+        self.lineEdit__senha = QLineEdit(self.frame)
+        self.lineEdit__senha.setObjectName(u"lineEdit__senha")
+        self.lineEdit__senha.setGeometry(QRect(100, 270, 271, 22))
+        self.lineEdit__senha.setEchoMode(QLineEdit.EchoMode.Password)
+        self.pushButton_entrar = QPushButton(self.frame)
+        self.pushButton_entrar.setObjectName(u"pushButton_entrar")
+        self.pushButton_entrar.setGeometry(QRect(150, 340, 121, 51))
+        self.pushButton_entrar.setStyleSheet(u"background-color: rgb(85, 255, 127);")
+        self.img = QLabel(self.frame)
+        self.img.setObjectName(u"img")
+        self.img.setGeometry(QRect(500, 140, 261, 341))
+        self.img.setPixmap(QPixmap(u":/f/imagem.jpg"))
+        TelaLogin.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(TelaLogin)
+
+        QMetaObject.connectSlotsByName(TelaLogin)
+    # setupUi
+
+    def retranslateUi(self, TelaLogin):
+        TelaLogin.setWindowTitle(QCoreApplication.translate("TelaLogin", u"MainWindow", None))
+        self.txt_Login.setText(QCoreApplication.translate("TelaLogin", u"Login", None))
+        self.txt_senha_2.setText(QCoreApplication.translate("TelaLogin", u"E-mail:", None))
+        self.txt_senha.setText(QCoreApplication.translate("TelaLogin", u"Senha:", None))
+        self.pushButton_entrar.setText(QCoreApplication.translate("TelaLogin", u"Entrar", None))
+        self.img.setText("")
+    # retranslateUi
+

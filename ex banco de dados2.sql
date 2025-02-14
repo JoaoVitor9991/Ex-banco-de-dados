@@ -18,6 +18,7 @@ select AVG(qnt_crimes) as media_crimes from f;
 
 
 
+
 INSERT INTO f (cidade, estado, regiao, dia, qnt_crimes) VALUES
 ("Água Clara", "MS", "CENTRO-OESTE", "jan/21", 0),
 ("Alcinópolis", "MS", "CENTRO-OESTE",	"jan/21", 0),
