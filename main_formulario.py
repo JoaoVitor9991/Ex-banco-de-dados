@@ -11,7 +11,7 @@ class main(QMainWindow):
         self.telaLogin.pushButton_entrar.clicked.connect(self.entrar)
     
     def entrar(self):
-        user = "admin"
+        user = "adm"
         senha= "123"
 
         if self.telaLogin.lineEdit_email.text()== user:
