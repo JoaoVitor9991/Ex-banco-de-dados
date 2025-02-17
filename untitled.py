@@ -18,7 +18,39 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QWidget)
 import icon_rc
+from conecaoBD import conectar
+import mysql.connector
+from PyQt5.QtWidgets import QMessageBox
 
+def validar(email, senha):
+    conexao = conectar()
+
+    if conexao is None:
+        return None
+    
+    cursor = conexao.cursor()
+
+    sql_verificar = 'SELECT id FROM usuario WHERE email=%s'
+    cursor.execute(sql_verificar, (email,))
+    resultado = cursor.fetchone()
+
+    if resultado:
+        print("Login Bem sucedido")
+        return resultado[0]
+    else:
+        try:
+            sql_inserir= "INSERTO INTO usuario (email, senha) VALUES (%s, %s)"
+            valores = (email, senha)
+            cursor.execute(sql_inserir, valores)
+            conexao.commit()
+            print("Usuario criado e logado.")
+            return cursor.lastrowid
+        except mysql.connector.Error as err:
+            print(f"Erro: {err}")
+            return None
+        finally:
+            cursor.close()
+            conexao.close()
 class Ui_TelaLogin(object):
     def setupUi(self, TelaLogin):
         if not TelaLogin.objectName():

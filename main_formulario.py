@@ -2,6 +2,32 @@ import sys
 from PySide6.QtWidgets import QMainWindow, QApplication, QMessageBox
 from untitled import Ui_TelaLogin
 from formulario import Ui_MainWindow
+from conecaoBD import conectar
+import mysql.connector 
+
+def validar_login(email, senha):
+    conexao = conectar()
+    if conexao is None:
+        return False
+    cursor = conexao.cursor()
+
+    sql = "SELECT * FROM usuario WHERE email = %s AND senha =%s"
+    valores = (email, senha)
+
+    cursor.execute(sql, valores)
+    resultado = cursor.fetchone()
+
+    cursor.close()
+    conexao.close()
+
+    if resultado:
+        print("Login Bem-sucedido!")
+        return True
+    else:
+        print("Usuário ou senha inválidos!")
+        return False
+    
+
 
 class main(QMainWindow):
     def __init__(self):
@@ -11,14 +37,18 @@ class main(QMainWindow):
         self.telaLogin.pushButton_entrar.clicked.connect(self.entrar)
     
     def entrar(self):
-        user = "adm"
-        senha= "123"
-
-        if self.telaLogin.lineEdit_email.text()== user:
-            if self.telaLogin.lineEdit__senha.text() ==senha:
+        email=  self.telaLogin.lineEdit_email.text() 
+        senha = self.telaLogin.lineEdit__senha.text()
+        if email and senha:
+            if validar_login(email, senha):
+                print("Login Bem sucedido!")
                 self.telaFormulario = Ui_MainWindow()
                 self.telaFormulario.setupUi(self)
-                self.telaFormulario.pushButton_Finalizar.clicked.connect(self.finalizar_formulario)
+            else:
+                print("Usuario ou senha invalidos")
+        else:
+            print("Preencha todos os campos.")
+
 
     def finalizar_formulario(self):
         msg= QMessageBox()
