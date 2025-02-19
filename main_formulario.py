@@ -41,7 +41,6 @@ class main(QMainWindow):
         senha = self.telaLogin.lineEdit__senha.text()
         if email and senha:
             if validar_login(email, senha):
-                print("Login Bem sucedido!")
                 self.telaFormulario = Ui_MainWindow()
                 self.telaFormulario.setupUi(self)
             else:
