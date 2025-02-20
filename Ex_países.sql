@@ -268,3 +268,17 @@ select nome from Cidade Where id =29;
 select nome From Estado where id = 9;
 select nome FROM Pais WHERE i= 19;
 select nome FROM Continente WHERE ID =4;
+ALTER TABLE Continente ADD COLUMN populacao BIGINT;
+ALTER TABLE Pais ADD COLUMN populacao BIGINT;
+ALTER TABLE Estado ADD COLUMN populacao BIGINT;
+ALTER TABLE Cidade ADD COLUMN populacao BIGINT;
+SELECT * FROM Pais ORDER BY populacao DESC LIMIT 1;
+SELECT * FROM Pais ORDER BY populacao ASC LIMIT 1;
+SELECT * FROM Continente ORDER BY populacao DESC LIMIT 1;
+SELECT * FROM Continente ORDER BY populacao ASC LIMIT 1;
+SELECT * FROM Estado ORDER BY populacao DESC LIMIT 1;
+SELECT * FROM Estado ORDER BY populacao ASC LIMIT 1;
+SELECT * FROM Cidade ORDER BY populacao DESC LIMIT 1;
+SELECT * FROM Cidade ORDER BY populacao ASC LIMIT 1;
+
+
