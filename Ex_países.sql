@@ -846,14 +846,7 @@ SELECT * FROM Estado ORDER BY populacao DESC LIMIT 1;
 SELECT * FROM Estado ORDER BY populacao ASC LIMIT 1;
 SELECT * FROM Cidade ORDER BY populacao DESC LIMIT 1;
 SELECT * FROM Cidade ORDER BY populacao ASC LIMIT 1;
-SELECT * FROM Pais ORDER BY populacao DESC LIMIT 1;
-SELECT * FROM Pais ORDER BY populacao ASC LIMIT 1;
-SELECT * FROM Continente ORDER BY populacao DESC LIMIT 1;
-SELECT * FROM Continente ORDER BY populacao ASC LIMIT 1;
-SELECT * FROM Estado ORDER BY populacao DESC LIMIT 1;
-SELECT * FROM Estado ORDER BY populacao ASC LIMIT 1;
-SELECT * FROM Cidade ORDER BY populacao DESC LIMIT 1;
-SELECT * FROM Cidade ORDER BY populacao ASC LIMIT 1;
+
 
 
 
