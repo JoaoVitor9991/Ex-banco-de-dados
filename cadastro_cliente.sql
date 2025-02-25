@@ -195,6 +195,24 @@ from cadastrar_cliente
 JOIN cidade on cadastrar_cliente.Id_cidade = cidade.Id_cidade
 join estado on cidade.Id_estado = estado.Id_estado;
 
+SELECT 
+    cadastrar_cliente.Nome, 
+    cidade.Cidade, 
+    estado.Estado, 
+    cadastrar_cliente.Fone, 
+    cadastrar_cliente.RG, 
+    sexo.Sexo, 
+    nacionalidade.Nacionalidade, 
+    raca.Raca, 
+    escolaridade.Escolaridade
+FROM 
+    cadastrar_cliente
+JOIN cidade ON cadastrar_cliente.Id_cidade = cidade.Id_cidade
+JOIN estado ON cidade.Id_estado = estado.Id_estado
+JOIN sexo ON cadastrar_cliente.Id_sexo = sexo.Id_sexo
+JOIN nacionalidade ON cadastrar_cliente.Id_nacionalidade = nacionalidade.Id_nacionalidade
+JOIN raca ON cadastrar_cliente.Id_raca = raca.Id_raca
+JOIN escolaridade ON cadastrar_cliente.Id_escolaridade = escolaridade.Id_escolaridade;
 
 
 
