@@ -182,4 +182,9 @@ select cadastrar_cliente.Nome, cadastrar_cliente.CPF, raca.Raca
 from cadastrar_cliente
 join raca on cadastrar_cliente.Id_raca = raca.Id_raca;
 
-from cadastar_cliente
+SELECT cadastrar_cliente.Nome, nacionalidade.Nacionalidade
+FROM cadastrar_cliente
+JOIN nacionalidade ON cadastrar_cliente.Id_nacionalidade = nacionalidade.Id_nacionalidade;
+
+
+
