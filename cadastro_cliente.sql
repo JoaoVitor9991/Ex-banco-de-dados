@@ -186,5 +186,15 @@ SELECT cadastrar_cliente.Nome, nacionalidade.Nacionalidade
 FROM cadastrar_cliente
 JOIN nacionalidade ON cadastrar_cliente.Id_nacionalidade = nacionalidade.Id_nacionalidade;
 
+SELECT cadastrar_cliente.Nome, escolaridade.Escolaridade
+FROM cadastrar_cliente
+JOIN escolaridade ON cadastrar_cliente.Id_escolaridade = escolaridade.Id_escolaridade;
+
+select cadastrar_cliente.Nome, cidade.Cidade, estado.Estado
+from cadastrar_cliente
+JOIN cidade on cadastrar_cliente.Id_cidade = cidade.Id_cidade
+join estado on cidade.Id_estado = estado.Id_estado;
+
+
 
 
