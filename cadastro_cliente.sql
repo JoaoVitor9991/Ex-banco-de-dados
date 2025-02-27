@@ -237,5 +237,59 @@ JOIN nacionalidade ON cadastrar_cliente.Id_nacionalidade = nacionalidade.Id_naci
 JOIN raca ON cadastrar_cliente.Id_raca = raca.Id_raca
 JOIN escolaridade ON cadastrar_cliente.Id_escolaridade = escolaridade.Id_escolaridade;
 
+SET SQL_SAFE_UPDATES = 0;
+UPDATE cidade 
+SET Cidade = 'Abaixo de M'
+WHERE LEFT (Cidade, 1) BETWEEN 'A' and 'M';
+
+update cidade
+set Cidade = 'Acima de M'
+where left (Cidade, 1) BETWEEN 'N' AND 'Z';
+
+update estado Set Estado = 'Norte'
+WHERE Estado in ('Acre','Amapá', 'Amazonas', 'Pará', 'Rondônia', 'Roraima', 'Tocantins');
+
+update estado SET Estado = 'Nordeste'
+where Estado in ('Alagoas', 'Bahia', 'Ceará', 'Maranhão', 'Paraíba', 'Pernambuco', 'Piauí', 'Rio Grande do Norte', 'Sergipe');
+
+update estado SET Estado = 'Centro-Oeste'
+where Estado in ('Goiás', 'Mato Grosso', 'Mato Grosso do Sul', 'Distrito Federal');
+
+update estado set Estado = 'Sudeste'
+WHERE Estado in ('Espírito Santo', 'Minas Gerais', 'Rio de Janeiro', 'São Paulo');
+
+update estado set Estado = 'Sul'
+where Estado in ('Paraná', 'Rio Grande do Sul', 'Santa Catarina');
+
+update nacionalidade 
+set Nacionalidade = 'Fora do Brasil' 
+where Nacionalidade = 'Estrangeiro';
+
+update raca 
+set Raca = 'Seres Humanos';
+
+update escolaridade 
+SET Escolaridade = 'Ensino Básico'
+Where Escolaridade in (
+	'Ensino Fundamental Incompleto',
+    'Ensino Fundamental compelto',
+    'Ensino Médio Incompleto',
+    'Ensino Médio Completo'
+    );
+    
+Update escolaridade 
+set Escolaridade =' Ensino Avançado'
+where Escolaridade in (
+		'Ensino Técnico ',
+        'Ensino Superior Incompleto',
+        'Ensino Superio Completo',
+        'Pós-Graduação, Mestrado ou Doutorado'
+        );
+	
+select * from cidade;
+select * from estado;
+select * from nacionalidade;
+
+
 
 
