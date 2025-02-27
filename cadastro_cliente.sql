@@ -47,6 +47,12 @@ create table nacionalidade (
 	Nacionalidade VARCHAR (50) NOT NULL
     );
     
+create table estado_civil(
+		Id_estado_civil INT primary key auto_increment,
+        descricao varchar (50) not null
+        );
+        
+
 
 INSERT INTO estado (Estado) VALUES
 ('Acre'), ('Alagoas'), ('Amapá'), ('Amazonas'), ('Bahia'),
