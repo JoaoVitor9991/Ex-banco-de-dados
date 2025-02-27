@@ -7,11 +7,13 @@ create table cadastrar_cliente(
     Fone VARCHAR(20),
     Id_cidade INT,
     Id_sexo INT,
+    Id_estado_civil INT,
     Id_raca int,
     ID_escolaridade INT,
     foreign key (Id_cidade) references cidade(Id_cidade),
     foreign key (Id_sexo) references sexo (Id_sexo),
     foreign key (Id_raca) references raca (Id_raca),
+    foreign key (Id_estado_civil) REFERENCES estado_civil(Id_estado_civil)
     foreign key (Id_escolaridade) references escolaridade(Id_escolaridade)
     );
     
