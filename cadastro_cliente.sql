@@ -301,7 +301,6 @@ SELECT
     estado.Estado 
 
 FROM cadastrar_cliente
-JOIN cidade ON cadastrar_cliente.Id_cidade = cidade.Id_cidade
-JOIN estado ON cidade.Id_estado = estado.Id_estado;
+
 
 
