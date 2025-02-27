@@ -312,13 +312,25 @@ raca.Raca
 from cadastrar_cliente 
 join raca on cadastrar_cliente.Id_raca = raca.Id_raca;
 
+SELECT 
+  cadastrar_cliente.Nome, 
+  nacionalidade.Nacionalidade
+FROM cadastrar_cliente
+JOIN nacionalidade ON cadastrar_cliente.Id_nacionalidade = nacionalidade.Id_nacionalidade;
+
+
+select 
+	cadastrar_cliente.Nome,
+    escolaridade.Escolaridade
+from cadastrar_cliente
+join escolaridade on cadastrar_cliente.ID_escolaridade = escolaridade.Id_escolaridade;
+
 select 
 cadastrar_cliente.Nome,
-nacionalidade.Nacionalidade
+cidade.Cidade,
+estado.Estado
 from cadastrar_cliente
-join nacionalidade on cadastrar_cliente.Id_nacionalidade = nacionalidade
-
-
-
+join cidade on cadastrar_cliente.Id_cidade = cidade.Id_cidade
+join estado on cidade.Id_estado = estado.Id_estado;
 
 
