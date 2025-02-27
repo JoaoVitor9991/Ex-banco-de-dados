@@ -13,7 +13,7 @@ create table cadastrar_cliente(
     foreign key (Id_cidade) references cidade(Id_cidade),
     foreign key (Id_sexo) references sexo (Id_sexo),
     foreign key (Id_raca) references raca (Id_raca),
-    foreign key (Id_estado_civil) REFERENCES estado_civil(Id_estado_civil)
+    foreign key (Id_estado_civil) REFERENCES estado_civil(Id_estado_civil),
     foreign key (Id_escolaridade) references escolaridade(Id_escolaridade)
     );
     
@@ -54,6 +54,20 @@ create table estado_civil(
         descricao varchar (50) not null
         );
         
+ALTER TABLE cadastrar_cliente ADD Id_nacionalidade INT;
+ALTER TABLE cadastrar_cliente ADD FOREIGN KEY (Id_nacionalidade) REFERENCES nacionalidade(Id_nacionalidade);
+        
+INSERT INTO nacionalidade (Nacionalidade) VALUES
+('Brasileiro'), 
+('Estrangeiro');
+
+
+INSERT INTO estado_civil (descricao) values
+('Solteiro'),
+('Casado'),
+('Separado'),
+('Divorciado'),
+('Viúvo');
 
 
 INSERT INTO estado (Estado) VALUES
@@ -176,6 +190,7 @@ SELECT * FROM cadastrar_cliente;
 SELECT * FROM cidade;
 select * from sexo;
 select * from escolaridade;
+select * from nacionalidade;
 
 select cadastrar_cliente.Nome, estado.Estado
 from cadastrar_cliente
