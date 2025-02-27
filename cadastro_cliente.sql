@@ -289,7 +289,19 @@ where Escolaridade in (
 select * from cidade;
 select * from estado;
 select * from nacionalidade;
+select * from raca;
+select * from escolaridade; 
 
+select cadastrar_cliente.Nome, cidade.Cidade
+from cadastrar_cliente
+Join cidade ON cadastrar_cliente.Id_cidade = cidade.Id_cidade;
+
+SELECT 
+    cadastrar_cliente.Nome, 
+    estado.Estado 
+FROM cadastrar_cliente
+JOIN cidade ON cadastrar_cliente.Id_cidade = cidade.Id_cidade
+JOIN estado ON cidade.Id_estado = estado.Id_estado;
 
 
 
