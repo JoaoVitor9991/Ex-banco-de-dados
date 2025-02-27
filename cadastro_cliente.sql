@@ -305,5 +305,20 @@ FROM cadastrar_cliente
 JOIN cidade ON cadastrar_cliente.Id_cidade = cidade.Id_cidade
 JOIN estado ON cidade.Id_estado = estado.Id_estado;
 
+select 
+cadastrar_cliente.Nome,
+cadastrar_cliente.CPF,
+raca.Raca
+from cadastrar_cliente 
+join raca on cadastrar_cliente.Id_raca = raca.Id_raca;
+
+select 
+cadastrar_cliente.Nome,
+nacionalidade.Nacionalidade
+from cadastrar_cliente
+join nacionalidade on cadastrar_cliente.Id_nacionalidade = nacionalidade
+
+
+
 
 
