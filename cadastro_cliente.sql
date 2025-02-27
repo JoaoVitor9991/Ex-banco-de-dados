@@ -1,7 +1,7 @@
 CREATE DATABASE cadastro_cliente;
 use cadastro_cliente;
 create table cadastrar_cliente(
-	CPF VARCHAR (11) PRIMARY KEY, 
+	CPF CHAR (11) PRIMARY KEY, 
     Nome VARCHAR(100) NOT NULL,
     RG VARCHAR (20),
     Fone VARCHAR(20),
@@ -173,7 +173,7 @@ insert into raca (raca) VALUES
 ('Branco'),
 ('Pardo'),
 ('Negro'),
-('Indígina'),
+('Indígena'),
 ('Amarelo');
 
 insert into escolaridade (Escolaridade) VALUES 
