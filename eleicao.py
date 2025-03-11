@@ -23,4 +23,4 @@ plt.grid(axis='x', linestyle= '--', alpha=0.7)
 for index, value in enumerate(votos):
     plt.text(value, index, f'{value}', va='center', ha='left')
 
-    
+plt.tight_layout() 
