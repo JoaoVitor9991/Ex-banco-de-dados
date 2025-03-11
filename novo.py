@@ -10,3 +10,8 @@ df.set_index('PassengerId', inplace=True)
 print(df.head(12))
 print(df.columns) # para descobrir as colunas 
 df.values
+df.describe #contagem, média
+print(df.loc[1]) #dado do primeiro elemento
+print(df.loc[[1,2,3]]) 
+print(df.loc[[1,2], ['Name', 'Sex', 'Age']])
+print(df.loc[10:20]) #pesquisa fatiada
