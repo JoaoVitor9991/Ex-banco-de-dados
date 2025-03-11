@@ -12,5 +12,8 @@ plt.xlabel('Ano')
 plt.ylabel('Salário Mínimo (R$)')
 plt.title("Evolução do Salário Mínimo (2000-2025)")
 plt.legend()
+
 plt.grid(True)
+
+
 plt.show()
