@@ -15,3 +15,8 @@ print(df.loc[1]) #dado do primeiro elemento
 print(df.loc[[1,2,3]]) 
 print(df.loc[[1,2], ['Name', 'Sex', 'Age']])
 print(df.loc[10:20]) #pesquisa fatiada
+print(df.loc[10:20:2])       #inicio o fim e o salto
+print(df.loc[10:])                
+print(df.loc[1:10, ['Name', 'Sex', 'Age']])
+print(df.query('Age > 20').head())
+print(df.query('Age > 20'))
