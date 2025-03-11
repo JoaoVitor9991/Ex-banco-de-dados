@@ -6,7 +6,7 @@ salarios = [151, 180, 200, 240, 260, 300, 350, 380, 415, 465, 510,
             1100, 1212, 1320, 1412, 1500]
 
 plt.figure(figsize=(10, 5))
-plt.plot(anos, salarios, marker = 'o', linestyle= '-', color='b', label= 'Salario Mínimo')
+plt.plot(anos, salarios, marker = 'o', linestyle= '-', color='b', label= 'Salário Mínimo')
 
 plt.xlabel('Ano')
 plt.ylabel('Salário Mínimo (R$)')
