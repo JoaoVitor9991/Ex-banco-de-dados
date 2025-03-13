@@ -1,0 +1,1 @@
+print('Age > 20 E sex=="Male"').head()
