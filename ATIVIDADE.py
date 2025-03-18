@@ -65,6 +65,37 @@ plt.ylabel("Empates")
 plt.xticks(rotation=90)
 plt.grid(axis='y', linestyle="--", alpha=0.7)
 
+perdido = df_2019.sort_values(by="loss", ascending=False)
+
+plt.figure(figsize=(12, 6))
+plt.bar(perdido["team"], perdido["draw"], color= "red")
+plt.xlabel("Times")
+plt.ylabel("Perdidos")
+plt.xticks(rotation=90)
+plt.grid(axis='y', linestyle="--", alpha=0.7)
+
+
+
+df = pd.read_csv("/kaggle/input/brasileirao-serie-a-2006-2022/brasileirao.csv")
+
+
+df_2019 = df[df["season"] == 2019]
+
+
+plt.figure(figsize=(10, 6))
+plt.scatter(df_2019["goals"], df_2019["won"], color="blue")
+
+
+for i, time in enumerate(df_2019["team"]):
+    plt.annotate(time, (df_2019["goals"].iloc[i], df_2019["won"].iloc[i]), fontsize=9, alpha=0.7)
+
+
+plt.title("Relação entre Gols Marcados e Vitórias - Brasileirão 2019")
+plt.xlabel("Gols Marcados")
+plt.ylabel("Vitórias")
+plt.grid(True, linestyle="--", alpha=0.7)
+
+
 
 
 plt.show()
