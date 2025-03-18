@@ -41,21 +41,6 @@ plt.ylabel("Pontuação")
 plt.xticks(rotation=90)
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 
-
-
-vitorias = df_2019.sort_values(by="won", ascending=False)
-
-plt.figure(figsize=(12, 6))
-plt.bar(vitorias["team"], vitorias["won"], color= "green")
-
-plt.title("Quem teve mais vitórias 2019")
-plt.xlabel("Times")
-plt.ylabel("Vitórias")
-plt.xticks(rotation=90)
-plt.grid(axis="y", linestyle="--", alpha=0.7)
-
-
-
 empates = df_2019.sort_values(by="draw", ascending=False)
 
 plt.figure(figsize=(12, 6))
@@ -74,7 +59,16 @@ plt.ylabel("Perdidos")
 plt.xticks(rotation=90)
 plt.grid(axis='y', linestyle="--", alpha=0.7)
 
+vitorias = df_2019.sort_values(by="won", ascending=False)
 
+plt.figure(figsize=(12, 6))
+plt.bar(vitorias["team"], vitorias["won"], color= "green")
+
+plt.title("Quem teve mais vitórias 2019")
+plt.xlabel("Times")
+plt.ylabel("Vitórias")
+plt.xticks(rotation=90)
+plt.grid(axis="y", linestyle="--", alpha=0.7)
 
 df = pd.read_csv("/kaggle/input/brasileirao-serie-a-2006-2022/brasileirao.csv")
 
@@ -95,7 +89,17 @@ plt.xlabel("Gols Marcados")
 plt.ylabel("Vitórias")
 plt.grid(True, linestyle="--", alpha=0.7)
 
+#PONTOS 
+pontuacao_final = df_2019.sort_values(by="points", ascending=False)
 
+plt.figure(figsize=(12, 6))
+plt.bar(pontuacao_final["team"], pontuacao_final["points"], color = "green")
+
+plt.title("Pontuação Final dos Times")
+plt.xlabel("Times")
+plt.ylabel("Pontuação")
+plt.xticks(rotation=90)
+plt.grid(axis="y", linestyle="--", alpha=0.7)
 
 
 plt.show()
